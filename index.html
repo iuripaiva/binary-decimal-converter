@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<!--FONTS-->
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+		
+		<!--CSS / FAVICON / ICONS-->
+	
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+		
+		<title>Conversor de Binário para Decimal</title>
+	
+	<script>
+		var binary = "";
+
+		function convert() {
+
+
+			//convert the variable 'binary' to a array
+			var binaryArray = binary.split("", binary.length);
+
+			//reverse the binary array
+			binaryArray.reverse();
+
+			var decimalArray = [];
+			var x = 0;
+
+			//create a loop to make the decimalArray have the same length as the binaryArray
+			while (x < binary.length){
+				decimalArray.push((2**x));
+				x++
+			}
+
+			var sumDecimalArray = 0;
+			var counter = 0;
+
+			//create a loop that sums every value from both arrays and add the final result to the variable sumDecimalArray
+			while (counter < decimalArray.length){
+				sumDecimalArray = sumDecimalArray+(decimalArray[counter]*binaryArray[counter]);
+				counter++
+				
+			}
+	
+			// Access and change binary variable
+			binary = String(document.getElementById("binary").value);
+
+			//check if the value contains only 0s and 1s
+			var i = 0;
+			var charCounter = 0;
+
+			while (charCounter < decimalArray.length){
+				if (binaryArray[charCounter] != 0){
+					if (binaryArray[charCounter] != 1){
+						i++
+						charCounter++
+					} else {
+						charCounter++
+					}
+				}else{
+					charCounter++
+				}
+			}
+			if (i != 0){
+				document.getElementById("result").innerHTML = "Erro! Digite somente 0 e 1.";
+			}else{
+				document.getElementById("result").innerHTML = sumDecimalArray;
+			}
+
+			//timeout created to make it work in a single click
+			setTimeout(convert() , 20);
+		}
+	</script>
+
+</head>
+
+<body style="text-align:center;">
+	
+	<main>
+		<section>
+			<div class="card">
+				<h1>
+					Binário para Decimal
+				</h1>
+				<hr>
+				<div class="content">
+					<article class="art1">
+						<h2>Binário: </h2>
+						<input type="text" id="binary">
+						<button id="button" onclick="convert()">Converter</button>
+					</article>
+						<br><br>
+					<article class="art2">
+						<h2>Decimal: </h2> <div id="result"></div>
+					</article>
+				</div>
+			</div>
+		</section>
+	</main>
+
+</body>
+
+</html>
