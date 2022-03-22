@@ -98,8 +98,9 @@ section {
 }
 
 .content {
-	padding-left: 20%;
+	padding-left: 16%;
 	text-align: left;
+	display: flex;
 }
 
 input {
@@ -138,13 +139,20 @@ button{
 	z-index: 1;
 	color: var(--purple);
 	background-color: rgb(23,17,52);
-	position: absolute;
-	margin-left: 4vw;
-	margin-top: 6vh;
+	margin-left: 3vw;
+	margin-top: 2vh;
+	min-width: 8rem;
+	max-width: 6rem;
+}
+
+.art1{
+	margin-top: -0.5rem;
+	justify-content: center;
 }
 
 .art2{
-	margin-top: -0.5rem;
+	align-self: center;
+	justify-content: center;
 }
 
 h1 {
@@ -160,7 +168,7 @@ h2 {
 	z-index: 1;
 	font-weight: bold;
 	font-size: 1.3rem;
-	margin-top: 2rem;
+	margin-top: 1rem;
 	position: relative;
 	color: var(--purple);
 }
