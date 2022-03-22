@@ -130,7 +130,6 @@ input {
 }
 
 button{
-	display: flex;
 	border-radius: 10px;
 	padding: .5rem;
 	font-size: 1rem;
@@ -140,9 +139,8 @@ button{
 	color: var(--purple);
 	background-color: rgb(23,17,52);
 	position: absolute;
-	margin-left: 16vw;
-	margin-top: 1vh;
-	margin-bottom: 1vh;
+	margin-left: 4vw;
+	margin-top: 6vh;
 }
 
 .art2{
