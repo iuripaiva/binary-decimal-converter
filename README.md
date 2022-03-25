@@ -1,5 +1,5 @@
 # Binary to Decimal converter
-Little website I made to convert from binary to decimal.
+Simple website, made to convert values from binary to decimal.
 
 
 ## Languages used  
