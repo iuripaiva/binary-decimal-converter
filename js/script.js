@@ -1,20 +1,20 @@
-var binary = "";
+let binary = "";
 
 		function convert() {
 
 
 			//convert the variable 'binary' to a array
-			var binaryArray = binary.split("", binary.length);
+			let binaryArray = binary.split("", binary.length);
 	
 			// Access and change binary variable
 			binary = String(document.getElementById("binary").value);
 			
 			// Convert binary value to decimal
-			var decimal = parseInt(binary, 2);
+			let decimal = parseInt(binary, 2);
 
 			//check if the input value contains only 0s and 1s
-			var i = 0;
-			var charCounter = 0;
+			let i = 0;
+			let charCounter = 0;
 
 			while (charCounter < binaryArray.length){
 				if (binaryArray[charCounter] != 0){
