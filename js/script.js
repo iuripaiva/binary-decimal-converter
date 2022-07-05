@@ -37,3 +37,22 @@ let binary = "";
 			//timeout created to make it work in a single click
 			setTimeout(convert() , 20);
 		}
+
+		function convert2() {
+
+
+			//convert the variable 'binary' to a array
+			let binaryArray = binary.split("", binary.length);
+	
+			// Access and change binary variable
+			binary = String(document.getElementById("binary").value);
+			
+			// Convert binary value to decimal
+			let binaryNum = binary.toString(2);
+
+			document.getElementById("result").innerHTML = binaryNum;
+			}
+
+			//timeout created to make it work in a single click
+			setTimeout(convert() , 20);
+		}
